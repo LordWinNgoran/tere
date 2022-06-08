@@ -24,10 +24,6 @@ class TypeContratController extends Controller
 
     public function create(Request $request){
 
-
-
-
-
         if ($request->isMethod('post')) {
 
             $request->validate([

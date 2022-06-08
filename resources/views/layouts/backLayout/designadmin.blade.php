@@ -49,6 +49,7 @@ $logo = Menu::get_logo();
     <link rel="stylesheet" href="{{asset('backendnw/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('backendnw/dist/css/adminlte.min.css')}}">
+    <link rel="stylesheet" href="{{asset('backendnw/dist/css/step.css')}}">
     <!-- Bootstrap Color Picker -->
     <link rel="stylesheet" href="{{asset('backendnw/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css')}}">
     <!-- Tempusdominus Bbootstrap 4 -->
@@ -389,6 +390,7 @@ $logo = Menu::get_logo();
 <script src="{{asset('backendnw/dist/js/pages/dashboard.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('backendnw/dist/js/demo.js')}}"></script>
+<script src="{{asset('backendnw/dist/js/step.js')}}"></script>
 <script>
     $(function () {
         $("#example1").DataTable({

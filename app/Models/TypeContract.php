@@ -33,4 +33,8 @@ class TypeContract extends Model
      */
     protected $fillable = ['libelle_type_contrat', 'code_type_contrat', 'flag_type_contrat', 'created_at', 'updated_at'];
 
+    public function contrat(){
+        return $this->hasMany(contrat::class,'id_type_contrats');
+    }
+    
 }

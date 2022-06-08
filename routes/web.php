@@ -1,6 +1,12 @@
 <?php
 
+use Doctrine\DBAL\Types\Type;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TypeContratController;
+use App\Http\Controllers\RessourceHumaine\FicheController;
+use App\Http\Controllers\RessourceHumaine\PosteController;
+use App\Http\Controllers\RessourceHumaine\ContratsController;
+use App\Http\Controllers\RessourceHumaine\FicheEmployeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +43,7 @@ Route::group(['middleware' => ['auth']], function () {
         'roles' => App\Http\Controllers\RoleController::class,
         'users' => App\Http\Controllers\UserController::class,
         /*'products' => App\Http\Controllers\ProductController::class,*/
-        'piece' => App\Http\Controllers\PieceController::class,
+        //'piece' => App\Http\Controllers\PieceController::class,
         'permissions' => App\Http\Controllers\PermissionController::class,
         'menus' => App\Http\Controllers\MenuController::class,
         'sousmenus' => App\Http\Controllers\SousmenuController::class,
@@ -325,6 +331,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::match(['get', 'post'], '/marche/creer', [App\Http\Controllers\MarcheController::class, 'create'])->name('marchecreer');
 
     Route::match(['get', 'post'], '/marche/modifier/{id}', [App\Http\Controllers\MarcheController::class, 'edit'])->name('marchemodifier');
+
+    //---- route ressource humaine----
+    Route::resource('/Employé',FicheEmployeController::class);
+    Route::resource('/Poste',PosteController::class);
+    Route::resource('/Contrats',ContratsController::class);
+    Route::resource('/type_contrat',TypeContratController::class);
+    Route::resource('/fiche_employe',FicheController::class);
 
 });
 
