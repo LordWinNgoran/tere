@@ -7,6 +7,7 @@ use App\Http\Controllers\RessourceHumaine\FicheController;
 use App\Http\Controllers\RessourceHumaine\PosteController;
 use App\Http\Controllers\RessourceHumaine\ContratsController;
 use App\Http\Controllers\RessourceHumaine\FicheEmployeController;
+use App\Http\Controllers\RessourceHumaine\FeuilleTravailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -338,6 +339,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('/Contrats',ContratsController::class);
     Route::resource('/type_contrat',TypeContratController::class);
     Route::resource('/fiche_employe',FicheController::class);
+    Route::resource('/feuille_travail',FeuilleTravailController::class);
+
 
 });
 

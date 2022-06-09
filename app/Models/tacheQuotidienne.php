@@ -10,7 +10,12 @@ class tacheQuotidienne extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $fillable = [
+        "id_employe",
+        "Date_du_jour",
+        "Description_de_activité",
+        "Tranche_horaire",
+    ];
     public function employes()
     {
         return $this->belongsTo(employes::class, 'id_employe');
