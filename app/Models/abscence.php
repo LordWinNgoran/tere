@@ -9,7 +9,12 @@ class abscence extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $fillable = [
+        'id_employe',
+        'Date_absence',
+        'Motif',
+        'validé'
+    ];
     public function employes()
     {
         return $this->belongsTo(employes::class, 'id_employe');

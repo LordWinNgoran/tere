@@ -170,8 +170,8 @@
                                                 <div class="row no-print">
                                                     <div class="col-12">
 
-                                                        <button type="button" class="btn btn-primary float-right" style="margin-right: 5px;">
-                                                            <i class="fas fa-download"></i> Generate PDF
+                                                        <button type="button"  onclick="window.print()" class="btn btn-primary float-right" style="margin-right: 5px;">
+                                                            <i class="fas fa-download"></i> Imprimer
                                                         </button>
                                                     </div>
                                                 </div>

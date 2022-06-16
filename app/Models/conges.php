@@ -9,7 +9,12 @@ class conges extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $fillable = [
+        "id_employe" ,
+        "Date_de_Debut" ,
+        "Date_de_Fin",
+        "Designation"
+    ];
     public function employes()
     {
         return $this->belongsTo(employes::class, 'id_employe');

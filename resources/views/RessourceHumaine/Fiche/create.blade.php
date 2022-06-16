@@ -58,8 +58,8 @@
                                         <div class="card-body">
                                             <div class="form-group">
                                                 <label>Minimal</label>
-                                                <select class="form-control select2" style="width: 100%;">
-                                                    <option selected="selected">Alabama</option>
+                                                <select class="form-control select2" name="id_" style="width: 100%;">
+
                                                     <option>Alaska</option>
                                                     <option>California</option>
                                                     <option>Delaware</option>

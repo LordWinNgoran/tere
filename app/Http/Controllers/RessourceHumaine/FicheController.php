@@ -4,6 +4,7 @@ namespace App\Http\Controllers\RessourceHumaine;
 
 use App\Http\Controllers\Controller;
 use App\Models\contrat;
+use App\Models\employes;
 use Illuminate\Http\Request;
 
 class FicheController extends Controller
@@ -16,8 +17,8 @@ class FicheController extends Controller
     public function index()
     {
         $fiche = contrat::with('employe','type_contrat')->get();
-
-        return view('RessourceHumaine.Fiche.index',compact('fiche'));
+        $emp = employes::all();
+        return view('RessourceHumaine.Fiche.index',compact('fiche','emp'));
     }
 
     /**
@@ -50,8 +51,7 @@ class FicheController extends Controller
     public function show($id)
     {
         $fiche = contrat::where('id_employe',"=",$id)->with('employe','type_contrat')->get();
-
-        return view('RessourceHumaine.Fiche.index',compact('fiche'));
+        return view('RessourceHumaine.Fiche.show',compact('fiche'));
     }
 
     /**

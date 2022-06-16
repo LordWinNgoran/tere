@@ -3,9 +3,11 @@
 use Doctrine\DBAL\Types\Type;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TypeContratController;
+use PhpOffice\PhpSpreadsheet\Shared\OLE\PPS\Root;
 use App\Http\Controllers\RessourceHumaine\FicheController;
 use App\Http\Controllers\RessourceHumaine\PosteController;
 use App\Http\Controllers\RessourceHumaine\ContratsController;
+use App\Http\Controllers\RessourceHumaine\AbsenceCongeController;
 use App\Http\Controllers\RessourceHumaine\FicheEmployeController;
 use App\Http\Controllers\RessourceHumaine\FeuilleTravailController;
 
@@ -340,8 +342,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('/type_contrat',TypeContratController::class);
     Route::resource('/fiche_employe',FicheController::class);
     Route::resource('/feuille_travail',FeuilleTravailController::class);
-
-
+    Route::resource('/absence_conges',AbsenceCongeController::class);
 });
 
 Route::get('/deconnexion', [App\Http\Controllers\HomeController::class, 'deconnexion']);
